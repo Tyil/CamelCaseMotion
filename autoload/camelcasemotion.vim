@@ -27,7 +27,7 @@ call add(s:forward_to_end_list, '\%(\a\|\d\)\+\ze[-_]')    " underscore_notation
 call add(s:forward_to_end_list, '\%(\k\@!\S\)\+')          " non-keyword
 call add(s:forward_to_end_list, '\%([-_]\@!\k\)\+\>')      " word
 call add(s:forward_to_end_list, '[-=]')                    " -, =
-call add(s:forward_to_end_list, "[\"'`]")                  " quotes
+call add(s:forward_to_end_list, "[\"'`«»]")                " quotes
 let s:forward_to_end = join(s:forward_to_end_list, '\|')
 
 let s:forward_to_next_list = []
@@ -43,7 +43,7 @@ call add(s:forward_to_next_list, '\u\l\+')                                " Came
 call add(s:forward_to_next_list, '\u\@<!\u\+')                            " ALLCAPS
 call add(s:forward_to_next_list, '[-_]\zs\%(\u\+\|\u\l\+\|\l\+\|\d\+\)')  " underscored followed by ALLCAPS, CamelCase, lowercase, or number
 call add(s:forward_to_next_list, '[-=]')                                  " -, =
-call add(s:forward_to_next_list, "[\"'`]")                                " quotes
+call add(s:forward_to_next_list, "[\"'`«»]")                              " quotes
 let s:forward_to_next = join(s:forward_to_next_list, '\|')
 
 function! s:Move(direction, count, mode)
