@@ -34,6 +34,12 @@ To use the default mappings, add the following to your vimrc:
 call camelcasemotion#CreateMotionMappings('<leader>')
 ```
 
+To override the default motionkeys with this plugin, use
+
+```vim
+call camelcasemotion#CreateMotionMappings('<silent>')
+```
+
 If you want to use different mappings, map your keys to the
 <Plug>CamelCaseMotion_? mapping targets your vimrc).
 
